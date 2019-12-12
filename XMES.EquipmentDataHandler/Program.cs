@@ -12,7 +12,7 @@ namespace XMES.EquipmentDataHandler
     {
         static void Main(string[] args)
         {
-            //MJH1234麦子GOGO
+            //MJH1234麦子GOGOlala2
             //ImportFurnitureOrderBLL src = new ImportFurnitureOrderBLL();
             //src.ImportFurnitureContractForServices();
             HostFactory.Run(x =>
