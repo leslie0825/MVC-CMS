@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file contains job definitions in schema version 2.0 format -->
+
+<job-scheduling-data xmlns="http://quartznet.sourceforge.net/JobSchedulingData" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
+
+  <processing-directives>
+    <overwrite-existing-data>true</overwrite-existing-data>
+  </processing-directives>
+
+  <schedule>
+
+    <!--ImportCabinetOrderJob导入橱柜订单配置-->
+    <!--<job>
+      <name>ImportCabinetOrderJob</name>
+      <group>CabinetOrder</group>
+      <description>导入橱柜订单</description>
+      <job-type>OPZZ.MSCS.OrderImportService.Jobs.ImportCabinetOrderJob,OPZZ.MSCS.OrderImportService</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <trigger>
+      <cron>
+        <name>ImportCabinetOrderJobTrigger</name>
+        <group>CabinetOrder</group>
+        <job-name>ImportCabinetOrderJob</job-name>
+        <job-group>CabinetOrder</job-group>
+        <cron-expression>0/5 * * * * ?</cron-expression>
+      </cron>
+    </trigger>-->
+
+    <!--ImportFurnitureOrderJob导入家具订单配置-->
+    <job>
+      <name>ImportFurnitureOrderJob</name>
+      <group>FurnitureOrder</group>
+      <description>导入家具订单</description>
+      <job-type>OPZZ.MSCS.OrderImportService.Jobs.ImportFurnitureOrderJob,OPZZ.MSCS.OrderImportService</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <trigger>
+      <cron>
+        <name>ImportFurnitureOrderJobTrigger</name>
+        <group>FurnitureOrder</group>
+        <job-name>ImportFurnitureOrderJob</job-name>
+        <job-group>FurnitureOrder</job-group>
+        <cron-expression>0/5 * * * * ?</cron-expression>
+      </cron>
+    </trigger>
+
+  </schedule>
+</job-scheduling-data>
